@@ -20,3 +20,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+td {
+    text-align: center
+}
+
+th {
+    text-align: center
+}

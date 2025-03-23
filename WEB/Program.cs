@@ -1,11 +1,23 @@
 using ApplicationCore.UserEntites.Concrete;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using DataAccess.Context.ApplicationContext;
 using DataAccess.Context.IdentityContext;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using WEB.Autofac;
+using WEB.ServiceExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+            .ConfigureContainer<ContainerBuilder>(builder =>
+            {
+                builder.RegisterModule(new AutofacModule());
+            });
+
+
+builder.Services.AddValidators();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -35,11 +47,16 @@ builder.Services.AddIdentity<AppUser, AppRole>(x =>
     x.Password.RequireNonAlphanumeric = false;
     x.Password.RequireUppercase = false;
     x.Password.RequireLowercase = false;
-    x.Lockout.MaxFailedAccessAttempts = 5; 
-    x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    x.Lockout.MaxFailedAccessAttempts = 5; //Þifreyi 5 kere yanlýþ girerse
+    x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5); //5 dakika boyunca hesabýný kitle
 })
     .AddEntityFrameworkStores<AppIdentityDbContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
+{
+    options.TokenLifespan = TimeSpan.FromMinutes(10);
+});
 
 var app = builder.Build();
 
@@ -58,6 +75,10 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

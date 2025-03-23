@@ -21,5 +21,6 @@ namespace ApplicationCore.Entities.Concrete
         public string Name { get; set; }
 
         public List<Teacher> Teachers { get; set; }
+        public object TotalHour { get; set; }
     }
 }
