@@ -1,4 +1,6 @@
-﻿namespace WEB.Areas.Education.Models.ViewModels.Teachers
+﻿using ApplicationCore.Consts;
+
+namespace WEB.Areas.Education.Models.ViewModels.Teachers
 {
     public class GetTeacherVM
     {

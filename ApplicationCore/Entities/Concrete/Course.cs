@@ -16,11 +16,12 @@ namespace ApplicationCore.Entities.Concrete
         }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(30)]
         [MinLength(2)]
         public string Name { get; set; }
 
         public List<Teacher> Teachers { get; set; }
-        public object TotalHour { get; set; }
+
+        public int? TotalHour { get; set; }
     }
 }

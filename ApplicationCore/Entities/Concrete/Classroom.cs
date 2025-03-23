@@ -12,7 +12,7 @@ namespace ApplicationCore.Entities.Concrete
     {
         public Classroom()
         {
-            Students = new List<Student>(); 
+            Students = new List<Student>();
         }
 
         [Required]
@@ -21,16 +21,16 @@ namespace ApplicationCore.Entities.Concrete
         public string Name { get; set; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(200)]
         [MinLength(3)]
         public string Description { get; set; }
 
         [Required]
         public Guid TeacherId { get; set; }
-
         public Teacher Teacher { get; set; }
 
         public List<Student> Students { get; set; }
+
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
     }

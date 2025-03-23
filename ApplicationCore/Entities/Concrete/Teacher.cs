@@ -17,9 +17,6 @@ namespace ApplicationCore.Entities.Concrete
 
         [Required]
         public Guid CourseId { get; set; }
-
         public Course Course { get; set; }
-
-
     }
 }

@@ -1,10 +1,5 @@
-﻿using ApplicationCore.Entities.Abstract;
-using System;
-using System.Collections.Generic;
+﻿using ApplicationCore.Consts;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WEB.Areas.Education.Models.ViewModels.Courses
 {
