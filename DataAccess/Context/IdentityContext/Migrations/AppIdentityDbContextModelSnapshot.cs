@@ -17,7 +17,7 @@ namespace DataAccess.Context.IdentityContext.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -63,7 +63,7 @@ namespace DataAccess.Context.IdentityContext.Migrations
                         new
                         {
                             Id = new Guid("d56b0610-7157-4fca-b989-bfdabac1f4f5"),
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 30, 450, DateTimeKind.Utc).AddTicks(7481),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 981, DateTimeKind.Local).AddTicks(9497),
                             Name = "admin",
                             NormalizedName = "ADMIN",
                             Status = 1
@@ -71,7 +71,7 @@ namespace DataAccess.Context.IdentityContext.Migrations
                         new
                         {
                             Id = new Guid("fb230ada-67a9-40f3-96b2-c9c602ed7fee"),
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 30, 450, DateTimeKind.Utc).AddTicks(8652),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 981, DateTimeKind.Local).AddTicks(9547),
                             Name = "customerManager",
                             NormalizedName = "CUSTOMERMANAGER",
                             Status = 1
@@ -79,7 +79,7 @@ namespace DataAccess.Context.IdentityContext.Migrations
                         new
                         {
                             Id = new Guid("7131d431-27c8-4b46-b7db-305cdbac3bef"),
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 30, 450, DateTimeKind.Utc).AddTicks(8660),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 981, DateTimeKind.Local).AddTicks(9551),
                             Name = "teacher",
                             NormalizedName = "TEACHER",
                             Status = 1
@@ -87,7 +87,7 @@ namespace DataAccess.Context.IdentityContext.Migrations
                         new
                         {
                             Id = new Guid("499a3674-2aae-469a-8940-41893b636c00"),
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 30, 450, DateTimeKind.Utc).AddTicks(8662),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 981, DateTimeKind.Local).AddTicks(9554),
                             Name = "student",
                             NormalizedName = "STUDENT",
                             Status = 1
@@ -125,6 +125,9 @@ namespace DataAccess.Context.IdentityContext.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FirstPassword")
                         .HasColumnType("text");
 
                     b.Property<bool>("HasPasswordChanged")
@@ -190,8 +193,8 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             Id = new Guid("c2b28166-5def-49e5-bb0b-741a16f886d4"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1985, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "105cc1bc-c600-48fd-bddf-10fd443a034e",
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 29, 665, DateTimeKind.Utc).AddTicks(3673),
+                            ConcurrencyStamp = "fde5fd50-da3e-4f0a-87ec-5796c07d85c7",
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 163, DateTimeKind.Local).AddTicks(5004),
                             Email = "admin@edu.com",
                             EmailConfirmed = false,
                             FirstName = "Administrator",
@@ -200,9 +203,9 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EDU.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAELLFovMKWX9CiydrMwQQAC4A1fr2rD+y85xRokwAzGy8Fe7z+X156YNiZCka9vjwVA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEITLwwtPtwwfl0uC16DHYYy+Vp8JKRd7sdaJo+JGDWdFwKNXUanfkFNQ5x8WyEotVg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "103468de-0e3e-4aaa-a769-e037284cd035",
+                            SecurityStamp = "1aadb8f8-6448-44b2-95bb-971d80a931f4",
                             Status = 1,
                             TwoFactorEnabled = false,
                             UserName = "admin"
@@ -212,8 +215,8 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             Id = new Guid("89db9ff5-9f40-4c5e-a17d-1c1ec45636c0"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1985, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "b3d820b6-56be-4710-ba57-480c20831648",
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 29, 808, DateTimeKind.Utc).AddTicks(5747),
+                            ConcurrencyStamp = "3601f791-9308-4e4e-a656-943da35402b2",
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 298, DateTimeKind.Local).AddTicks(9535),
                             Email = "ahmet.cekic@edu.com",
                             EmailConfirmed = false,
                             FirstName = "Ahmet",
@@ -222,9 +225,9 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "AHMET.CEKIC@EDU.COM",
                             NormalizedUserName = "AHMET.CEKIC",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJYRNbiJJErv7BeWbmikEdB0pj3PXgP8v3dZ+Ct4CN0wyA7MXag9RCItI3HnjF1NRQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELwO9RnZk2bPSpT4HwdHBv4uzwif2cMJllpR7YRqLjrJKCnJ0gdLSKqiYqZclw1UTg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "58324521-705c-433c-a1b2-02aefe7db987",
+                            SecurityStamp = "334c13fe-b117-439b-a53a-b75f184b7f38",
                             Status = 1,
                             TwoFactorEnabled = false,
                             UserName = "ahmet.cekic"
@@ -234,8 +237,8 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             Id = new Guid("976e4111-519f-485f-a21b-186e30f07371"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1996, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "affd2238-ce37-4a33-a809-23bcbddbf4d4",
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 29, 939, DateTimeKind.Utc).AddTicks(6183),
+                            ConcurrencyStamp = "2892d002-0b21-4f94-9c77-bfd243c11cd6",
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 448, DateTimeKind.Local).AddTicks(9860),
                             Email = "sinaemre.bekar@edu.com",
                             EmailConfirmed = false,
                             FirstName = "Sina Emre",
@@ -244,9 +247,9 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SINAEMRE.BEKAR@EDU.COM",
                             NormalizedUserName = "SINAEMRE.BEKAR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDgo6g2Ncpt3+iGSEWvG3WdEPaUA65elY7P08QxwuB/K6BoPn09RdjHeKfBKtbtOdg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPGeZcYwHpk9FliIX/2ZIEDlcq1FDmW+IwhvA7NPInNCwX/dkDMOtBo3C/VN5gec0A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5388fb2d-03d6-4b04-ad39-611e2eda8ff8",
+                            SecurityStamp = "aaf70b06-a9d8-440f-a552-deb552d0309c",
                             Status = 1,
                             TwoFactorEnabled = false,
                             UserName = "sinaemre.bekar"
@@ -256,8 +259,8 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             Id = new Guid("d3a95b67-ce52-4c1d-835a-14df01e3501f"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "3aec526e-0102-4810-bdb0-0c9b4ee16295",
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 30, 72, DateTimeKind.Utc).AddTicks(4115),
+                            ConcurrencyStamp = "ab6b678f-aa3b-4756-817f-5e6791fa8cd1",
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 579, DateTimeKind.Local).AddTicks(879),
                             Email = "murat.yeler@edu.com",
                             EmailConfirmed = false,
                             FirstName = "Murat",
@@ -266,9 +269,9 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "MURAT.YELER@EDU.COM",
                             NormalizedUserName = "MURAT.YELER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDeTNg+f9lGPZC+2uhzg5ANCwn1lUpSAEmlPYwlqOrJ9UZ2aRzr1wr+JmkR6VHjxvQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMUhWwrb6/etMfFRGncuTaPCJ3T1DAJnaeclcR9G+k5+iVMZr/9xR6uQBk/nbcupJQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "77c2f2ef-2a4c-4b20-9ec3-41cb6adfa8e4",
+                            SecurityStamp = "6a4032c8-8ff9-4001-b93c-b9f2ddb36ada",
                             Status = 1,
                             TwoFactorEnabled = false,
                             UserName = "murat.yeler"
@@ -278,8 +281,8 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             Id = new Guid("43c10399-6734-42d1-91c5-838b551a066e"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(2014, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "a7025b15-2196-49cf-82db-c20513e1f146",
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 30, 196, DateTimeKind.Utc).AddTicks(9208),
+                            ConcurrencyStamp = "b937d670-0c29-4dea-b43d-3e10cf8a278a",
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 693, DateTimeKind.Local).AddTicks(7050),
                             Email = "miray.cekic@edu.com",
                             EmailConfirmed = false,
                             FirstName = "Miray",
@@ -288,9 +291,9 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "MIRAY.CEKIC@EDU.COM",
                             NormalizedUserName = "MIRAY.CEKIC",
-                            PasswordHash = "AQAAAAIAAYagAAAAEC8W5vIDLlQ63q4UUpLa7j8AHIeBGEtgCOs4t0Ymc9uqrhOEvTg0boqMsCgiWH1AIg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENUOP6J0Hr09z6zuOAJIAtfLMVqu8AQc+IYpF13SFWe0HBsoFOC3tDLnLkmp0A66rw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c9136208-150d-476e-b75a-0166b69ebd46",
+                            SecurityStamp = "53c91a29-08f4-4a56-a84d-c1c3caac7ccf",
                             Status = 1,
                             TwoFactorEnabled = false,
                             UserName = "miray.cekic"
@@ -300,8 +303,8 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             Id = new Guid("8b12fe04-e7d8-4fe6-ba17-1283ac7abaa9"),
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1975, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "3f14dffc-340a-4876-a76a-7474cadd9949",
-                            CreatedDate = new DateTime(2025, 1, 15, 18, 21, 30, 310, DateTimeKind.Utc).AddTicks(9608),
+                            ConcurrencyStamp = "dbe240d6-317f-4daa-ba81-e29e57a7037d",
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 38, 49, 831, DateTimeKind.Local).AddTicks(1078),
                             Email = "danilo.zanna@edu.com",
                             EmailConfirmed = false,
                             FirstName = "Danilo",
@@ -310,9 +313,9 @@ namespace DataAccess.Context.IdentityContext.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "DANILO.ZANNA@EDU.COM",
                             NormalizedUserName = "DANILO.ZANNA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHJdQUcQ7i9vTyuqezhsiFDDWTEGucNFxOQAI9Sc9nE70LyS3mOXQycaaF1h25k3sA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKRXUYy32DAoJb/oadZIJ3emF98qCQbRmB+VyI0KSGFgOdrS8tj7zhqRz7plyEU17A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "170a1347-3113-4257-ab67-a6d0bf1a8661",
+                            SecurityStamp = "7a9f06d9-a621-487f-9682-21a4bb1b5153",
                             Status = 1,
                             TwoFactorEnabled = false,
                             UserName = "danilo.zanna"

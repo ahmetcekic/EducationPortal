@@ -16,7 +16,7 @@ namespace ApplicationCore.Entities.Concrete
         }
 
         [Required]
-        [MaxLength(30)]
+        [MaxLength(100)]
         [MinLength(2)]
         public string Name { get; set; }
 

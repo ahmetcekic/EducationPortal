@@ -17,7 +17,7 @@ namespace DataAccess.Context.ApplicationContext.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.11")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -36,13 +36,19 @@ namespace DataAccess.Context.ApplicationContext.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("Status")
                         .HasColumnType("integer");
@@ -63,7 +69,7 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                         new
                         {
                             Id = new Guid("fbb187bf-ec28-4524-a710-fae4f59c6d71"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6844),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8961),
                             Description = "Teknoloji Sınıfı",
                             Name = "TEK-2024",
                             Status = 1,
@@ -91,6 +97,9 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("TotalHour")
+                        .HasColumnType("integer");
+
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("timestamp without time zone");
 
@@ -102,42 +111,42 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                         new
                         {
                             Id = new Guid("5302c91d-6e2e-4596-956f-c673a83c462f"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6107),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8247),
                             Name = ".NET Eğitim Programı",
                             Status = 1
                         },
                         new
                         {
                             Id = new Guid("8e38ae94-455a-4269-8157-ac276238814a"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6125),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8273),
                             Name = "Java Eğitim Programı",
                             Status = 1
                         },
                         new
                         {
                             Id = new Guid("b213772c-2986-4204-afa3-7d68adf070bc"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6127),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8276),
                             Name = "Python Eğitim Programı",
                             Status = 1
                         },
                         new
                         {
                             Id = new Guid("70d1e658-6578-435d-98f3-db2b60e31bb9"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6129),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8277),
                             Name = "Sistem ve Ağ Uzmanlığı Programı",
                             Status = 1
                         },
                         new
                         {
                             Id = new Guid("2b3f0a6f-3888-4f2f-b091-2e6d48bfdfda"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6130),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8279),
                             Name = "Siber Güvenlik Programı",
                             Status = 1
                         },
                         new
                         {
                             Id = new Guid("d711fea2-e7bf-4d40-8598-e4a1174f9d91"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6132),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8282),
                             Name = "Mobil Programlama Programı",
                             Status = 1
                         });
@@ -147,9 +156,6 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AppUserId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("BirthDate")
@@ -192,9 +198,8 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                         new
                         {
                             Id = new Guid("1ab0efab-65f6-4006-ba57-cb4278626936"),
-                            AppUserId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BirthDate = new DateTime(1994, 5, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6423),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8653),
                             Email = "ahmet.cekic@edu.com",
                             FirstName = "Ahmet",
                             HireDate = new DateTime(2023, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -207,9 +212,6 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AppUserId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("BirthDate")
@@ -256,6 +258,9 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                     b.Property<string>("ProjectPath")
                         .HasColumnType("text");
 
+                    b.Property<double?>("RegisterPrice")
+                        .HasColumnType("double precision");
+
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 
@@ -272,10 +277,9 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                         new
                         {
                             Id = new Guid("d3a95b67-ce52-4c1d-835a-14df01e3501f"),
-                            AppUserId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BirthDate = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ClassroomId = new Guid("fbb187bf-ec28-4524-a710-fae4f59c6d71"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6993),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(9100),
                             Email = "murat.yeler@edu.com",
                             FirstName = "Murat",
                             LastName = "Yeler",
@@ -284,10 +288,9 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                         new
                         {
                             Id = new Guid("43c10399-6734-42d1-91c5-838b551a066e"),
-                            AppUserId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BirthDate = new DateTime(2014, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ClassroomId = new Guid("fbb187bf-ec28-4524-a710-fae4f59c6d71"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(7000),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(9106),
                             Email = "miray.cekic@edu.com",
                             FirstName = "Miray",
                             LastName = "Çekiç",
@@ -296,10 +299,9 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                         new
                         {
                             Id = new Guid("8b12fe04-e7d8-4fe6-ba17-1283ac7abaa9"),
-                            AppUserId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BirthDate = new DateTime(1975, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ClassroomId = new Guid("fbb187bf-ec28-4524-a710-fae4f59c6d71"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(7003),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(9109),
                             Email = "danilo.zanna@edu.com",
                             FirstName = "Danilo",
                             LastName = "Zanna",
@@ -311,9 +313,6 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AppUserId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("BirthDate")
@@ -361,10 +360,9 @@ namespace DataAccess.Context.ApplicationContext.Migrations
                         new
                         {
                             Id = new Guid("d6b125d9-7a07-4c84-b194-20da87df3bde"),
-                            AppUserId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BirthDate = new DateTime(1996, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CourseId = new Guid("5302c91d-6e2e-4596-956f-c673a83c462f"),
-                            CreatedDate = new DateTime(2025, 1, 15, 19, 2, 2, 122, DateTimeKind.Utc).AddTicks(6575),
+                            CreatedDate = new DateTime(2025, 4, 4, 1, 37, 54, 557, DateTimeKind.Local).AddTicks(8808),
                             Email = "sinaemre.bekar@edu.com",
                             FirstName = "Sina Emre",
                             HireDate = new DateTime(2022, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
