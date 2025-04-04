@@ -17,7 +17,7 @@ namespace Business.Manager.Concrete
             _smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("snabkr7010@gmail.com", "ziio wjmp gial nexm"),
+                Credentials = new NetworkCredential("lostcekic@gmail.com", "sdoq ilsx rjif nhgb"),
                 EnableSsl = true
             };
         }
@@ -25,13 +25,13 @@ namespace Business.Manager.Concrete
         {
             var mailMessage = new MailMessage
             {
-                From = new MailAddress("snabkr7010@gmail.com"),
+                From = new MailAddress("lostcekic@gmail.com"),
                 Subject = subject,
                 Body = htmlMessage,
                 IsBodyHtml = true
             };
 
-            mailMessage.To.Add(email);
+            mailMessage.To.Add("ccekicahmet@gmail.com");
 
             try
             {

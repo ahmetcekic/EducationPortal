@@ -40,7 +40,6 @@
     </div>
     <!-- Preloader Start -->
     <header>
-        @RenderBody()
         <!-- Header Start -->
         <div class="header-area header-transparent">
             <div class="main-header ">
@@ -60,8 +59,8 @@
                                         <nav>
                                             <ul id="navigation">
                                                 <li><a asp-controller="Home" asp-action="Index" class="active">Anasayfa</a></li>
-                                                <li class="scroll-to-section"><a href="#">Kurslar</a></li>
-                                                <li class="scroll-to-section"><a href="#">Hakkımızda</a></li>
+                                                <li class="scroll-to-section"><a href="courses.html">Kurslar</a></li>
+                                                <li class="scroll-to-section"><a href="about.html">Hakkımızda</a></li>
                                                 <li>
                                                     <a href="#">İnsan Kaynakları</a>
                                                     <ul class="submenu">
@@ -96,6 +95,7 @@
         </div>
         <!-- Header End -->
     </header>
+    @RenderBody()
     <main>
         <!--? slider Area Start-->
         <section class="slider-area ">
