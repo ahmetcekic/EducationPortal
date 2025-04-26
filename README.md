@@ -1,4 +1,4 @@
-ASP.NET Core 8.0: Ef Course application
+ASP.NET Core 8.0
 
 Bu proje, ASP.NET Core 8.0 ile Entity Framework Core kullanılarak geliştirilmiş bir eğitim uygulamasıdır. Seride, temel veritabanı işlemlerinin gelişmiş ilişkisel veri modelleme tekniklerine kadar birçok konu ele alınmaktadır. Bu seri, Entity Framework Core ile modern veri tabanlı uygulamalar geliştirme yeteneklerinizi artırmayı amaçlamaktadır.
 
