@@ -71,22 +71,6 @@ EducationPortal/
 ├── appsettings.json
 ├── Program.cs
 └── Startup.cs
-📜 Kurulum ve Çalıştırma
-Kodu Klonla:
-
-bash
-git clone https://github.com/[KullanıcıAdın]/EducationPortal.git
-Veritabanı Ayarları:
-
-appsettings.json dosyasındaki PostgreSQL bağlantı ayarlarını düzenleyin.
-
-Gereksinimleri Yükle:
-
-Visual Studio 2022 veya Rider ile projeyi açın ve bağımlılıkları yükleyin.
-
-Projeyi Çalıştır:
-
-IIS Express veya Kestrel kullanarak uygulamayı başlatın.
 
 🛠 Geliştirme Süreci
 Proje, kullanıcı dostu bir online eğitim yönetim sistemi geliştirmek amacıyla tasarlandı. Şu anda aktif olarak geliştirilmektedir ve katkılara açıktır.
@@ -94,43 +78,12 @@ Proje, kullanıcı dostu bir online eğitim yönetim sistemi geliştirmek amacı
 📌 Planlanan Geliştirmeler
 Raporlama ve analiz modülleri.
 
-Canlı ders entegrasyonu.
-
-Mobil uyumlu arayüz geliştirme.
-
-🖊 Katkıda Bulunma
-Katkıda bulunmak isterseniz, pull request gönderin veya bir issue oluşturun. Her türlü geri bildirime açığız!
-
 📞 İletişim
 Herhangi bir sorunuz veya öneriniz varsa, lütfen şu adreslerden benimle iletişime geçin:
-
-E-posta: ahmet@example.com
 
 GitHub: Ahmet Çekiç
 İçerik Özeti
 
-Giriş ve Temeller
 
-Entity Sınıfları ve DbContext: Veri modellerinin ve bağlam sınıfının oluşturulması.
-Connection Strings ve Migrations: Veritabanı bağlantısı ve veritabanı şemasının yönetimi.
-CRUD İşlemleri
 
-Kayıt Ekleme: Yeni kayıtların oluşturulması.
-Kayıt Listeleme: Mevcut verilerin okunması ve görüntülenmesi.
-Kayıt Güncelleme Formu ve Kayıt Güncelleme: Var olan verilerin güncellenmesi.
-Kayıt Silme: Gereksiz verilerin kaldırılması.
-Uygulamalar
 
-Kurs Kayıt Sayfası ve Kurs Listesi: Kurs verilerinin yönetimi.
-Kurs Güncelleme Sayfası ve Kurs Silme: Kurs bilgilerinin düzenlenmesi ve silinmesi.
-İlişkisel Veritabanı İşlemleri
-
-Öğrenci Kurs Kayıt Formu ve Öğrenci Kurs Kaydının Eklenmesi: İlişkili veri kayıtlarının oluşturulması.
-Navigation Properties: Veri modelleri arasındaki ilişkileri yönetme.
-Öğrenci Kurslarının Listeleme ve Kurs Öğrencilerinin Listeleme: İlişkisel verilerin sorgulanması.
-Gelişmiş Özellikler
-
-Veri Tabanı Şemasının Güncellenmesi: Veritabanı yapısında yapılan değişikliklerin yönetimi.
-Öğretmen Yönetim Sayfaları: Öğretmen bilgilerini düzenleme ve listeleme.
-Öğretmen Kurs İlişkilendirmesi: Kurslar ve öğretmenler arasındaki ilişkilerin yönetimi.
-Öğretmen Seçiminin Zorunlu Olması: İlişkilerinize kuralların uygulanması.
